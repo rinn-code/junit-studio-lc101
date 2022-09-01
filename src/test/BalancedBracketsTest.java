@@ -8,11 +8,8 @@ import static org.junit.Assert.*;
 
 public class BalancedBracketsTest {
 
-    /*TODO: add tests here
-    * These strings have balanced brackets:
-            *  "[]LaunchCode"
+    //TODO: add tests here
 
-            */
     @Test
     public void onlyBracketsReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
@@ -52,6 +49,14 @@ public class BalancedBracketsTest {
     @Test
     public void backwardsBracketsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("Launch]Code["));
+    }
+    @Test
+    public void oopsAllBrackets() {
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]]][[["));
+    }
+    @Test
+    public void bracketBoysAreBackInTown() {
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[[[BRACKET BOYYYYS]]]"));
     }
 
     @Test
